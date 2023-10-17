@@ -1,0 +1,19 @@
+<mat-card>
+    <mat-card-header>
+      <mat-card-title>Alumnos</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <app-tabla-alumnos   
+        [dataSource]="users"
+        (editUser)="onEditUser($event)"
+        (deleteUser)="onDeleteUser($event)"></app-tabla-alumnos>
+    </mat-card-content>
+    <mat-card-actions>
+      <button (click)="openUsersDialog()"
+       mat-flat-button 
+       color="primary">
+        <mat-icon>add</mat-icon>
+        Crear usuario
+      </button>
+    </mat-card-actions>
+  </mat-card>
